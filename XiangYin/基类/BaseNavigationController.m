@@ -28,10 +28,7 @@
     
     //设置导航栏的背景图片
 //    [self.navigationBar setBarTintColor:Color_nav];
-    
 }
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
