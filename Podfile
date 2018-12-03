@@ -25,8 +25,8 @@ target 'XiangYin' do
    pod 'SDWebImage'
    pod 'MBProgressHUD'
    pod 'AxcAE_TabBar'
-  
-  
+   pod 'WRNavigationBar'
+  pod 'pop'
   
   
   

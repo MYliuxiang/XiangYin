@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <AxcAE_TabBar/AxcAE_TabBar.h>
+#import "HyPopMenuView.h"
 
 @interface MainTabBarController : UITabBarController
 

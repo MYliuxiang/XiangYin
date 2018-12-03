@@ -23,7 +23,8 @@ typedef NS_ENUM(NSInteger,NTESMainTabType) {
     NTESMainTabTypeSetting,        //设置
 };
 
-@interface MainTabBarController ()<AxcAE_TabBarDelegate>
+@interface MainTabBarController ()<AxcAE_TabBarDelegate,HyPopMenuViewDelegate>
+@property (nonatomic, strong) HyPopMenuView* menu;
 
 @end
 
@@ -38,6 +39,50 @@ static MainTabBarController *mainTVC = nil;
 	// Do any additional setup after loading the view.
     [self addChildViewControllers];
     
+    
+    _menu = [HyPopMenuView sharedPopMenuManager];
+    PopMenuModel* model = [PopMenuModel
+                           allocPopMenuModelWithImageNameString:@"发布主页-文字"
+                           AtTitleString:@"文字"
+                           AtTextColor:[UIColor grayColor]
+                           AtTransitionType:PopMenuTransitionTypeCustomizeApi
+                           AtTransitionRenderingColor:nil];
+    
+    PopMenuModel* model1 = [PopMenuModel
+                            allocPopMenuModelWithImageNameString:@"发布主页-视频"
+                            AtTitleString:@"视频"
+                            AtTextColor:[UIColor grayColor]
+                            AtTransitionType:PopMenuTransitionTypeCustomizeApi
+                            AtTransitionRenderingColor:nil];
+    
+    PopMenuModel* model2 = [PopMenuModel
+                            allocPopMenuModelWithImageNameString:@"发布主页-相册"
+                            AtTitleString:@"相册"
+                            AtTextColor:[UIColor grayColor]
+                            AtTransitionType:PopMenuTransitionTypeCustomizeApi
+                            AtTransitionRenderingColor:nil];
+    
+   
+    
+    _menu.dataSource = @[ model, model1, model2];
+    _menu.delegate = self;
+    _menu.popMenuSpeed = 12.0f;
+    _menu.automaticIdentificationColor = false;
+    _menu.animationType = HyPopMenuViewAnimationTypeViscous;
+    
+        UILabel* topView = [[UILabel alloc] init];
+    topView.text = @"乡音";
+    topView.font = [UIFont systemFontOfSize:32];
+        topView.frame = CGRectMake(0, 44, CGRectGetWidth(self.view.frame), 92);
+    topView.textAlignment = NSTextAlignmentCenter;
+        _menu.topView = topView;
+    // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)popMenuView:(HyPopMenuView*)popMenuView
+didSelectItemAtIndex:(NSUInteger)index
+{
+    
 }
 
 - (void)addChildViewControllers{
@@ -49,11 +94,10 @@ static MainTabBarController *mainTVC = nil;
     BaseNavigationController *nav4 = [[BaseNavigationController alloc] initWithRootViewController:[TransactionVC new]];
     BaseNavigationController *nav5 = [[BaseNavigationController alloc] initWithRootViewController:[MyVC new]];
 
-    
     NSArray <NSDictionary *>*VCArray =
     @[@{@"vc":nav1,@"itemTitle":@"城市圈"},
       @{@"vc":nav2,@"itemTitle":@"美食美景"},
-      @{@"vc":nav3,@"itemTitle":@" "},
+      @{@"vc":nav3,@"itemTitle":@""},
       @{@"vc":nav4,@"itemTitle":@"同城交易"},
       @{@"vc":nav5,@"itemTitle":@"我的"}];
     // 1.遍历这个集合
@@ -139,12 +183,15 @@ static NSInteger lastIdx = 0;
         [self.axcTabBar setSelectIndex:lastIdx WithAnimation:NO]; // 换回上一个选中状态
         // 或者
         //        self.axcTabBar.selectIndex = lastIdx; // 不去切换TabBar的选中状态
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:@"点击了中间的,不切换视图"
-                                                                          preferredStyle:UIAlertControllerStyleAlert];
-        [alertController addAction:([UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            NSLog(@"好的！！！！");
-        }])];
-        [self presentViewController:alertController animated:YES completion:nil];
+//        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:@"点击了中间的,不切换视图"
+//                                                                          preferredStyle:UIAlertControllerStyleAlert];
+//        [alertController addAction:([UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//            NSLog(@"好的！！！！");
+//        }])];
+//        [self presentViewController:alertController animated:YES completion:nil];
+        
+        _menu.backgroundType = HyPopMenuViewBackgroundTypeLightBlur;
+        [_menu openMenu];
     }
 }
 - (void)setSelectedIndex:(NSUInteger)selectedIndex{

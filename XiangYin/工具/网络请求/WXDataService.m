@@ -7,8 +7,7 @@
 //
 
 #import "WXDataService.h"
-#import "AFNetworkActivityIndicatorManager.h"
-
+#import "NSDictionary+SetNullWithStr.h"
 /**
  *  是否开启https SSL 验证
  *
@@ -25,39 +24,45 @@
 @implementation WXDataService
 
 //网络监听
-+ (void)startNetWorkMonitoringWithBlock:(BANetworkStatusBlock)networkStatus{
+- (void)AFNetworkStatus{
     
-    /*! 1.获得网络监控的管理者 */
+    //1.创建网络监测者
     AFNetworkReachabilityManager *manager = [AFNetworkReachabilityManager sharedManager];
-    /*! 当使用AF发送网络请求时,只要有网络操作,那么在状态栏(电池条)wifi符号旁边显示  菊花提示 */
-    [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
-    /*! 2.设置网络状态改变后的处理 */
+    
+    /*枚举里面四个状态  分别对应 未知 无网络 数据 WiFi
+     typedef NS_ENUM(NSInteger, AFNetworkReachabilityStatus) {
+     AFNetworkReachabilityStatusUnknown          = -1,      未知
+     AFNetworkReachabilityStatusNotReachable     = 0,       无网络
+     AFNetworkReachabilityStatusReachableViaWWAN = 1,       蜂窝数据网络
+     AFNetworkReachabilityStatusReachableViaWiFi = 2,       WiFi
+     };
+     */
+    
     [manager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
-        /*! 当网络状态改变了, 就会调用这个block */
-        switch (status)
-        {
+        //这里是监测到网络改变的block  可以写成switch方便
+        //在里面可以随便写事件
+        switch (status) {
             case AFNetworkReachabilityStatusUnknown:
-                NSLog(@"未知网络");
-                networkStatus ? networkStatus(BANetworkStatusUnknown) : nil;
+                NSLog(@"未知网络状态");
                 break;
             case AFNetworkReachabilityStatusNotReachable:
-                NSLog(@"没有网络");
-                networkStatus ? networkStatus(BANetworkStatusNotReachable) : nil;
+                NSLog(@"无网络");
                 break;
+                
             case AFNetworkReachabilityStatusReachableViaWWAN:
-                NSLog(@"手机自带网络");
-                networkStatus ? networkStatus(BANetworkStatusReachableViaWWAN) : nil;
+                NSLog(@"蜂窝数据网");
                 break;
+                
             case AFNetworkReachabilityStatusReachableViaWiFi:
-                NSLog(@"wifi 网络");
-                networkStatus ? networkStatus(BANetworkStatusReachableViaWiFi) : nil;
+                NSLog(@"WiFi网络");
+                
+                break;
+                
+            default:
                 break;
         }
-        [[AFNetworkReachabilityManager sharedManager] stopMonitoring];
-
-    }];
-    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
-
+        
+    }] ;
 }
 
 #pragma mark - 创建请求者
@@ -75,326 +80,178 @@
     manager.responseSerializer = [AFHTTPResponseSerializer serializer]; // AFN不会解析,数据是data，需要自己解析
     //    manager.responseSerializer = [AFJSONResponseSerializer serializer]; // AFN会JSON解析返回的数据
     // 个人建议还是自己解析的比较好，有时接口返回的数据不合格会报3840错误，大致是AFN无法解析返回来的数据
-    return manager;
-}
-//+ (AFHTTPSessionManager *)requestAFWithURL:(NSString *)url
-//                                    params:(NSDictionary *)params
-//                                httpMethod:(NSString *)httpMethod
-//                                     isHUD:(BOOL)ishud
-//                               finishBlock:(NetFinishBlock)finishBlock
-//                                errorBlock:(ErrorBlock)errorBlock
-//{
-//    
-//    if (ishud) {
-//       
-//        [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
-//
-//    }
-//    
-//    AFHTTPSessionManager *manager = [self manager];
-//    
-//    [manager.requestSerializer setValue:@"1" forHTTPHeaderField:@"ostype"];
-////    [manager.requestSerializer setValue:[YCKeyChainHelper getDeviceIdentifier] forHTTPHeaderField:@"devid"];
-//
-//
-//    
-//    // 加上这行代码，https ssl 验证。
-//    if(openHttpsSSL)
-//    {
-//        [manager setSecurityPolicy:[self customSecurityPolicy]];
-//    }
-//
-//    manager.requestSerializer.timeoutInterval = 10.f;
-//    RequestType type;
-//    if ([httpMethod isEqualToString:@"GET"])
-//    {
-//        type = RequestGetType;
-//    
-//    }else{
-//        type = RequestPostType;
-//    
-//    }
-//    
-//    NSMutableDictionary *mdic = [NSMutableDictionary dictionaryWithDictionary:params];
-//    BOOL isImage;
-//    for (NSString *key in mdic) {
-//        if ([key isEqualToString:@"anchor_background"]) {
-//            [mdic removeObjectForKey:key];
-//            isImage = YES;
-//        }
-//    }
-//    
-////    NSDictionary *dic = [HttpHelper httpParams:mdic];
-////    if (isImage) {
-////        [dic setValue:params[@"anchor_background"] forKey:@"anchor_background"];
-////
-////    }
-//
-//    
-//    
-//    switch (type) {
-//            
-//        case RequestGetType:
-//        {
-//            [manager GET:url parameters:mdic progress:^(NSProgress * _Nonnull downloadProgress) {
-//                
-//            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//                
-//                if (ishud) {
-//                    [MBProgressHUD hideAllHUDsForView:[UIApplication sharedApplication].keyWindow animated:YES];
-//                    
-//                }
-//                
-//                if (finishBlock != nil) {
-//                   
-//                    NSDictionary *result = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-//                   
-//                    finishBlock([NSDictionary changeType:result]);
-//                }
-//                
-//                
-//            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//                
-//                if (ishud) {
-//                    [MBProgressHUD hideAllHUDsForView:[UIApplication sharedApplication].keyWindow animated:YES];
-//                    
-//                }
-//                if (errorBlock != nil) {
-//                    
-//                    NSLog(@"Error: %@", [error localizedDescription]);
-//                    
-//                    errorBlock(error);
-//                }
-//                
-//                
-//            }];
-//
-//        }
-//            break;
-//        case RequestPostType:
-//        {
-//            
-//            [manager POST:url parameters:dic progress:^(NSProgress * _Nonnull uploadProgress) {
-//                
-//            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//                if(ishud){
-//                [MBProgressHUD hideAllHUDsForView:[UIApplication sharedApplication].keyWindow animated:YES];
-//                }
-//                if (finishBlock != nil) {
-//                    NSDictionary *result = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-//                             finishBlock([NSDictionary changeType:result]);
-//                }
-//                
-//            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//                
-//                [MBProgressHUD hideAllHUDsForView:[UIApplication sharedApplication].keyWindow animated:YES];
-//                if (errorBlock != nil) {
-//                    
-//                    errorBlock(error);
-//                }
-//            }];
-//
-//        }
-//            break;
-//        default:
-//            break;
-//    }
-//
-//    return manager;
-//
-//
-//}
-
-
-+ (AFHTTPSessionManager *)postMP3:(NSString *)url
-                           params:(NSDictionary *)params
-                         fileData:(NSData *)fileData
-                      finishBlock:(NetFinishBlock)finishBlock
-                       errorBlock:(ErrorBlock)errorBlock
-{
-    [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
-    AFHTTPSessionManager *manager = [self manager];
+    
     // 加上这行代码，https ssl 验证。
     if(openHttpsSSL)
     {
         [manager setSecurityPolicy:[self customSecurityPolicy]];
     }
     
-    [manager POST:url parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
-        
-        [formData appendPartWithFileData:fileData name:@"recoder" fileName:@"recoder.mp3" mimeType:@"mp3"];
-        
-    } progress:^(NSProgress * _Nonnull uploadProgress) {
-        
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-        [MBProgressHUD hideAllHUDsForView:[UIApplication sharedApplication].keyWindow animated:YES];
-        if (finishBlock != nil) {
-            NSDictionary *result = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-            finishBlock(result);
-        }
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        [MBProgressHUD hideAllHUDsForView:[UIApplication sharedApplication].keyWindow animated:YES];
-        if (errorBlock != nil) {
-            errorBlock(error);
-        }
-    }];
-    
     return manager;
-    
-}
-
-+ (AFHTTPSessionManager *)postImage:(NSString *)url
-                             params:(NSDictionary *)params
-                           fileData:(NSData *)fileData
-                        finishBlock:(NetFinishBlock)finishBlock
-                         errorBlock:(ErrorBlock)errorBlock
-{
-    [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
-    
-    AFHTTPSessionManager *manager = [self manager];
-    [manager.requestSerializer setValue:@"1" forHTTPHeaderField:@"ostype"];
-//    [manager.requestSerializer setValue:[YCKeyChainHelper getDeviceIdentifier] forHTTPHeaderField:@"devid"];
-    // 加上这行代码，https ssl 验证。
-    if(openHttpsSSL)
-    {
-        [manager setSecurityPolicy:[self customSecurityPolicy]];
-    }
-    
-    [manager POST:url parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
-        
-        [formData appendPartWithFileData:fileData name:@"filename" fileName:@"my.png" mimeType:@"image/jpeg"];
-        
-    } progress:^(NSProgress * _Nonnull uploadProgress) {
-        
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-        [MBProgressHUD hideAllHUDsForView:[UIApplication sharedApplication].keyWindow animated:YES];
-        if (finishBlock != nil) {
-            NSDictionary *result = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-            finishBlock(result);
-        }
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
-        [MBProgressHUD hideAllHUDsForView:[UIApplication sharedApplication].keyWindow animated:YES];
-        if (errorBlock != nil) {
-            
-            errorBlock(error);
-        }
-        
-    }];
-    
-    return manager;
-    
 }
 
 
-
-+ (AFHTTPSessionManager *)syncrequestAFWithURL:(NSString *)url
+/**
+ 请求回调
+ 
+ @param url 请求的url
+ @param params 请求参数
+ @param requestType 请求方式
+ @param ishud 是否有hud
+ @param finishBlock 请求成功的回调
+ @param errorBlock 请求失败的回调
+ @return AFHTTPSessionManager
+ */
++ (AFHTTPSessionManager *)requestAFWithURL:(NSString *)url
                                     params:(NSDictionary *)params
-                                httpMethod:(NSString *)httpMethod
-                               finishBlock:(NetFinishBlock)finishBlock
-                                errorBlock:(ErrorBlock)errorBlock
+                               requestType:(RequestType)requestType
+                                     ishud:(BOOL)ishud
+                               finishBlock:(Finish_Block)finishBlock
+                                errorBlock:(Error_Block)errorBlock
 {
-    
-    [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
-  
-    AFHTTPSessionManager *manager = [self manager];
-    
-    // 加上这行代码，https ssl 验证。
-    if(openHttpsSSL)
-    {
-        [manager setSecurityPolicy:[self customSecurityPolicy]];
-    }
-
-    RequestType type;
-    if ([httpMethod isEqualToString:@"GET"])
-    {
-        type = RequestGetType;
-    }else{
-        type = RequestPostType;
+    if (ishud) {
+        
+        [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
         
     }
-    switch (type) {
-        case RequestGetType:
-        {
+    
+    AFHTTPSessionManager *manager = [self manager];
+
+  
+    switch (requestType) {
             
+        case RequestType_Get:
+        {
             [manager GET:url parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
                 
             } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 
-                [MBProgressHUD hideAllHUDsForView:[UIApplication sharedApplication].keyWindow animated:YES];
-                if (finishBlock != nil) {
-                    NSDictionary *result = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-                    finishBlock(result);
-                }
-                
+                [self request_success_finishBlock:finishBlock responseObject:responseObject ishud:ishud];
+             
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 
-                [MBProgressHUD hideAllHUDsForView:[UIApplication sharedApplication].keyWindow animated:YES];
-                if (errorBlock != nil) {
-                    
-                    errorBlock(error);
-                }
+               [self request_failure_errorBlock:errorBlock error:error ishud:ishud];
                 
             }];
-            
-            
         }
             break;
-        case RequestPostType:
+        
+        case RequestType_Post:
         {
-            
             [manager POST:url parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {
                 
             } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 
-                [MBProgressHUD hideAllHUDsForView:[UIApplication sharedApplication].keyWindow animated:YES];
-                if (finishBlock != nil) {
-                    NSDictionary *result = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-                    finishBlock(result);
-                }
+               [self request_success_finishBlock:finishBlock responseObject:responseObject ishud:ishud];
                 
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 
-                [MBProgressHUD hideAllHUDsForView:[UIApplication sharedApplication].keyWindow animated:YES];
-                if (errorBlock != nil) {
-                    
-                    errorBlock(error);
-                }
+                [self request_failure_errorBlock:errorBlock error:error ishud:ishud];
+          
             }];
             
         }
+
             break;
+            
         default:
             break;
     }
     
-
     return manager;
-    
-    
 }
 
 
-+ (AFHTTPSessionManager *)requestAFWithURL:(NSString *)url
-                                   parames:(NSDictionary *)params
-                                 imageArry:(NSArray  *)imageArry
-                               finishBlock:(NetFinishBlock)finishBlock
-                                errorBlock:(ErrorBlock)errorBlock
+
+/**
+  上传图片/音频文件
+ 
+ @param url 请求的url
+ @param params 请求参数
+ @param dataType 图片 还是 音频
+ @param ishud 是否有hud
+ @param fileData 图片/音频数据
+ @param finishBlock 请求成功的回调
+ @param errorBlock 请求失败的回调
+ @return AFHTTPSessionManager
+ */
++ (AFHTTPSessionManager *)requestDataWithURL:(NSString *)url
+                                      params:(NSDictionary *)params
+                                    dataType:(DataType)dataType
+                                       ishud:(BOOL)ishud
+                                    fileData:(NSData *)fileData
+                                 finishBlock:(Finish_Block)finishBlock
+                                  errorBlock:(Error_Block)errorBlock;
 {
+    
+    if (ishud) {
+        
+        [MBProgressHUD showMessag:@"正在上传,请稍后..." toView:[UIApplication sharedApplication].keyWindow];
+        
+    }
     
     AFHTTPSessionManager *manager = [self manager];
     
-    // 加上这行代码，https ssl 验证。
-    if(openHttpsSSL)
-    {
-        [manager setSecurityPolicy:[self customSecurityPolicy]];
+    [manager POST:url parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        
+        switch (dataType) {
+                
+            case DataType_Mp3:
+            {
+                [formData appendPartWithFileData:fileData name:@"recoder" fileName:@"recoder.mp3" mimeType:@"mp3"];
+            }
+                break;
+            case DataType_Image:
+            {
+                [formData appendPartWithFileData:fileData name:@"filename" fileName:@"my.png" mimeType:@"image/jpeg"];
+            }
+                break;
+                
+            default:
+                break;
+        }
+        
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        [self request_success_finishBlock:finishBlock responseObject:responseObject ishud:ishud];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        [self request_failure_errorBlock:errorBlock error:error ishud:ishud];
+        
+    }];
+    
+    return manager;
+    
+}
+
+/**
+ 上传多张图片
+ 
+ @param url 请求的url
+ @param params 请求参数
+ @param ishud 是否有hud
+ @param imageArry 图片数组
+ @param finishBlock 请求成功的回调
+ @param errorBlock 请求失败的回调
+ @return AFHTTPSessionManager
+ */
++ (AFHTTPSessionManager *)requestImagesWithURL:(NSString *)url
+                                        params:(NSDictionary *)params
+                                         ishud:(BOOL)ishud
+                                     imageArry:(NSArray *)imageArry
+                                   finishBlock:(Finish_Block)finishBlock
+                                    errorBlock:(Error_Block)errorBlock
+{
+    
+    if (ishud) {
+        [MBProgressHUD showMessag:@"正在上传,请稍后..." toView:[UIApplication sharedApplication].keyWindow];
+
     }
     
-    [MBProgressHUD showMessag:@"正在上传,请稍后..." toView:[UIApplication sharedApplication].keyWindow];
+    AFHTTPSessionManager *manager = [self manager];
     
     [manager POST:url parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         
@@ -404,10 +261,11 @@
                 UIImage  * img=imageArry[i];
                 
                 NSData  * feedbackImg =UIImageJPEGRepresentation(img, 0.5);
-//                NSData  * feedbackImg =UIImageJPEGRepresentation(img, 0.5);
+                //                NSData  * feedbackImg =UIImageJPEGRepresentation(img, 0.5);
                 [formData appendPartWithFileData:feedbackImg name:@"photo" fileName:@"photo" mimeType:@"image/jpeg"];
                 
             }else if([imageArry[i] isKindOfClass:[NSData class]]){
+                
                 NSData *videoData = [imageArry objectAtIndex:i];
                 [formData appendPartWithFileData:videoData name:@"file" fileName:@"video1.mov" mimeType:@"video/quicktime"];
             }
@@ -420,26 +278,70 @@
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-        [MBProgressHUD hideAllHUDsForView:[UIApplication sharedApplication].keyWindow animated:YES];
-        //        [pross removeFromSuperview];
-        NSDictionary *dic1 = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
-        finishBlock(dic1);
-        
+        [self request_success_finishBlock:finishBlock responseObject:responseObject ishud:ishud];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
-        [MBProgressHUD hideAllHUDsForView:[UIApplication sharedApplication].keyWindow animated:YES];
-        if (errorBlock != nil) {
-            
-            errorBlock(error);
-        }
-        
+       [self request_failure_errorBlock:errorBlock error:error ishud:ishud];
         
     }];
-
+    
     return manager;
     
+    
 }
+
+
+/**
+ 请求成功的处理
+
+ @param finishBlock 成功回调
+ @param responseObject 回调数据
+ @param ishud 是否有hud
+ */
++ (void)request_success_finishBlock:(Finish_Block)finishBlock
+                     responseObject:(id)responseObject
+                              ishud:(BOOL)ishud
+
+{
+    if (ishud) {
+        
+        [MBProgressHUD hideHUDForView:[UIApplication sharedApplication].keyWindow animated:YES];
+    }
+    
+    if (finishBlock != nil) {
+        
+        NSDictionary *result = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        finishBlock([NSDictionary changeType:result]);
+    }
+    
+}
+
+/**
+ 请求失败的处理
+ 
+ @param errorBlock 失败回调
+ @param error 失败数据
+ @param ishud 是否有hud
+ */
++ (void)request_failure_errorBlock:(Error_Block)errorBlock
+                             error:(NSError *)error
+                             ishud:(BOOL)ishud
+
+{
+    if (ishud) {
+        [MBProgressHUD hideHUDForView:[UIApplication sharedApplication].keyWindow animated:YES];
+    }
+    
+    if (errorBlock != nil) {
+        
+        NSLog(@"Error: %@", [error localizedDescription]);
+        
+        errorBlock(error);
+    }
+    
+}
+
 
 + (AFSecurityPolicy*)customSecurityPolicy
 {
@@ -465,5 +367,8 @@
     
     return securityPolicy;
 }
+
+
+
 
 @end

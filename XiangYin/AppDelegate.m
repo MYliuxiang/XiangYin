@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "MainTabBarController.h"
 
+
 @interface AppDelegate ()
 
 @end
@@ -20,7 +21,8 @@
     // Override point for customization after application launch.
     
     
-     self.window.rootViewController = [[MainTabBarController alloc] init];
+    
+    self.window.rootViewController = [[MainTabBarController alloc] init];
         
     return YES;
 }

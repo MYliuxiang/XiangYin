@@ -7,73 +7,89 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AFNetworking.h"
-#import "MBProgressHUD.h"
 
 
-/*! 使用枚举NS_ENUM:区别可判断编译器是否支持新式枚举,支持就使用新的,否则使用旧的 */
-typedef NS_ENUM(NSUInteger, BANetworkStatus)
-{
-    /*! 未知网络 */
-    BANetworkStatusUnknown           = 0,
-    /*! 没有网络 */
-    BANetworkStatusNotReachable,
-    /*! 手机 3G/4G 网络 */
-    BANetworkStatusReachableViaWWAN,
-    /*! wifi 网络 */
-    BANetworkStatusReachableViaWiFi
-};
-
-
-typedef void(^NetFinishBlock) (id result);
-typedef void(^ErrorBlock) (NSError *error);
-/*! 实时监测网络状态的 block */
-typedef void(^BANetworkStatusBlock)(BANetworkStatus status);
+typedef void(^Finish_Block) (id result);
+typedef void(^Error_Block) (NSError *error);
 
 typedef NS_ENUM(NSInteger, RequestType) {
-    RequestPostType,
-    RequestGetType
+    RequestType_Post,
+    RequestType_Get
 };
+
+typedef NS_ENUM(NSInteger, DataType) {
+    DataType_Image,
+    DataType_Mp3
+};
+
 @interface WXDataService : NSObject
 
 @property (nonatomic,assign)BOOL isHUD;
 
-/**
-*  请求通过回调
-*
-*  @param url          上传文件的 url 地址
-*  @param paramsDict   参数字典
-*  @param httpMethod   请求类型
-*  @param finishBlock  成功
-*  @param errorBlock   失败
-*   
-*/
 
-+ (void)startNetWorkMonitoringWithBlock:(BANetworkStatusBlock)networkStatus;
+/**
+ 请求回调
+
+ @param url 请求的url
+ @param params 请求参数
+ @param requestType 请求方式
+ @param ishud 是否有hud
+ @param finishBlock 请求成功的回调
+ @param errorBlock 请求失败的回调
+ @return AFHTTPSessionManager
+ */
 + (AFHTTPSessionManager *)requestAFWithURL:(NSString *)url
                                     params:(NSDictionary *)params
-                                httpMethod:(NSString *)httpMethod
-                                     isHUD:(BOOL)ishud
-                               finishBlock:(NetFinishBlock)finishBlock
-                                errorBlock:(ErrorBlock)errorBlock;
+                               requestType:(RequestType)requestType
+                                     ishud:(BOOL)ishud
+                               finishBlock:(Finish_Block)finishBlock
+                                errorBlock:(Error_Block)errorBlock;
 
-+ (AFHTTPSessionManager *)postMP3:(NSString *)url
-                           params:(NSDictionary *)params
-                         fileData:(NSData *)fileData
-                      finishBlock:(NetFinishBlock)finishBlock
-                       errorBlock:(ErrorBlock)errorBlock;
 
-+ (AFHTTPSessionManager *)postImage:(NSString *)url
-                             params:(NSDictionary *)params
-                           fileData:(NSData *)fileData
-                        finishBlock:(NetFinishBlock)finishBlock
-                         errorBlock:(ErrorBlock)errorBlock;
 
-+ (AFHTTPSessionManager *)requestAFWithURL:(NSString *)url
-                                   parames:(NSDictionary *)params
-                                 imageArry:(NSArray  *)imageArry
-                               finishBlock:(NetFinishBlock)finishBlock
-                                errorBlock:(ErrorBlock)errorBlock;
+
+
+/**
+ 上传图片/音频文件
+
+ @param url 请求的url
+ @param params 请求参数
+ @param dataType 图片 还是 音频
+ @param ishud 是否有hud
+ @param fileData 图片/音频数据
+ @param finishBlock 请求成功的回调
+ @param errorBlock 请求失败的回调
+ @return AFHTTPSessionManager
+ */
++ (AFHTTPSessionManager *)requestDataWithURL:(NSString *)url
+                                      params:(NSDictionary *)params
+                                    dataType:(DataType)dataType
+                                      ishud:(BOOL)ishud
+                                   fileData:(NSData *)fileData
+                                finishBlock:(Finish_Block)finishBlock
+                                 errorBlock:(Error_Block)errorBlock;
+
+
+
+
+
+/**
+ 上传多张图片
+ 
+ @param url 请求的url
+ @param params 请求参数
+ @param ishud 是否有hud
+ @param imageArry 图片数组
+ @param finishBlock 请求成功的回调
+ @param errorBlock 请求失败的回调
+ @return AFHTTPSessionManager
+ */
++ (AFHTTPSessionManager *)requestImagesWithURL:(NSString *)url
+                                       params:(NSDictionary *)params
+                                        ishud:(BOOL)ishud
+                                     imageArry:(NSArray *)imageArry
+                                  finishBlock:(Finish_Block)finishBlock
+                                   errorBlock:(Error_Block)errorBlock;
 
 
 @end
