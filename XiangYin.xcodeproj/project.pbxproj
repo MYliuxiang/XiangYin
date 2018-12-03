@@ -15,6 +15,36 @@
 		22A2C70221B10D7900706985 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A2C70121B10D7900706985 /* main.m */; };
 		22A2C70C21B10D7900706985 /* XiangYinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A2C70B21B10D7900706985 /* XiangYinTests.m */; };
 		22A2C71721B10D7900706985 /* XiangYinUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A2C71621B10D7900706985 /* XiangYinUITests.m */; };
+		22A2C72D21B10F2300706985 /* CityCircleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A2C72B21B10F2300706985 /* CityCircleVC.m */; };
+		22A2C72E21B10F2300706985 /* CityCircleVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22A2C72C21B10F2300706985 /* CityCircleVC.xib */; };
+		22A2C73221B10F6400706985 /* FoodandSpotVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A2C73021B10F6400706985 /* FoodandSpotVC.m */; };
+		22A2C73321B10F6400706985 /* FoodandSpotVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22A2C73121B10F6400706985 /* FoodandSpotVC.xib */; };
+		22A2C73721B10F7300706985 /* CenterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A2C73521B10F7300706985 /* CenterVC.m */; };
+		22A2C73821B10F7300706985 /* CenterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22A2C73621B10F7300706985 /* CenterVC.xib */; };
+		22A2C73C21B10F8E00706985 /* TransactionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A2C73A21B10F8E00706985 /* TransactionVC.m */; };
+		22A2C73D21B10F8E00706985 /* TransactionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22A2C73B21B10F8E00706985 /* TransactionVC.xib */; };
+		22A2C74121B10F9B00706985 /* MyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A2C73F21B10F9B00706985 /* MyVC.m */; };
+		22A2C74221B10F9B00706985 /* MyVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22A2C74021B10F9B00706985 /* MyVC.xib */; };
+		22A2C74721B110A100706985 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A2C74621B110A100706985 /* UINavigationController+FDFullscreenPopGesture.m */; };
+		22A2C74C21B1157B00706985 /* NSObject+XWAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A2C74A21B1157A00706985 /* NSObject+XWAdd.m */; };
+		22A2C75321B1158700706985 /* UIButton+ImageTitleSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A2C74E21B1158600706985 /* UIButton+ImageTitleSpacing.m */; };
+		22A2C75521B1158700706985 /* FSTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A2C75221B1158700706985 /* FSTextView.m */; };
+		22A2C75821B1159300706985 /* MyColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A2C75721B1159300706985 /* MyColor.m */; };
+		22A2C75C21B115B100706985 /* WXDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A2C75A21B115B100706985 /* WXDataService.m */; };
+		22A2C75F21B115C800706985 /* LxCustomAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A2C75E21B115C800706985 /* LxCustomAlert.m */; };
+		22A2C77321B1173100706985 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A2C77221B1173100706985 /* MainTabBarController.m */; };
+		22A2C77921B11CC600706985 /* UIView+ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A2C77621B11CC500706985 /* UIView+ViewController.m */; };
+		22A2C77A21B11CC600706985 /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A2C77821B11CC500706985 /* UIViewExt.m */; };
+		22A2C77D21B1231F00706985 /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A2C77C21B1231F00706985 /* MBProgressHUD+Add.m */; };
+		22C1F2FE21B139BE0043583F /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1F2FD21B139BE0043583F /* BaseNavigationController.m */; };
+		22C1F30121B139C90043583F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1F2FF21B139C60043583F /* BaseViewController.m */; };
+		22C1F30C21B13B610043583F /* LYEmptyBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1F30421B13B600043583F /* LYEmptyBaseView.m */; };
+		22C1F30D21B13B610043583F /* LYEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1F30621B13B600043583F /* LYEmptyView.m */; };
+		22C1F30E21B13B610043583F /* UIScrollView+Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1F30921B13B600043583F /* UIScrollView+Empty.m */; };
+		22C1F30F21B13B610043583F /* UIView+LYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1F30B21B13B600043583F /* UIView+LYExtension.m */; };
+		43999EDA5B9D0187B712D7F9 /* libPods-XiangYinUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D2B01F291172B190AFE9815 /* libPods-XiangYinUITests.a */; };
+		73D65B9CB2614F4619EDBB62 /* libPods-XiangYin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 100CF5EBDB9F4A516F3D1341 /* libPods-XiangYin.a */; };
+		90B470052F551313DD1D3DF7 /* libPods-XiangYinTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F2719C302FAEF55C459A93 /* libPods-XiangYinTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +65,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		100CF5EBDB9F4A516F3D1341 /* libPods-XiangYin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XiangYin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22A2C6EF21B10D5400706985 /* XiangYin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XiangYin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22A2C6F221B10D5400706985 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		22A2C6F321B10D5400706985 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +82,65 @@
 		22A2C71221B10D7900706985 /* XiangYinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XiangYinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22A2C71621B10D7900706985 /* XiangYinUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XiangYinUITests.m; sourceTree = "<group>"; };
 		22A2C71821B10D7900706985 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22A2C72A21B10F2300706985 /* CityCircleVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CityCircleVC.h; sourceTree = "<group>"; };
+		22A2C72B21B10F2300706985 /* CityCircleVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CityCircleVC.m; sourceTree = "<group>"; };
+		22A2C72C21B10F2300706985 /* CityCircleVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityCircleVC.xib; sourceTree = "<group>"; };
+		22A2C72F21B10F6400706985 /* FoodandSpotVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoodandSpotVC.h; sourceTree = "<group>"; };
+		22A2C73021B10F6400706985 /* FoodandSpotVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoodandSpotVC.m; sourceTree = "<group>"; };
+		22A2C73121B10F6400706985 /* FoodandSpotVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodandSpotVC.xib; sourceTree = "<group>"; };
+		22A2C73421B10F7300706985 /* CenterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CenterVC.h; path = XiangYin/Center/CenterVC.h; sourceTree = SOURCE_ROOT; };
+		22A2C73521B10F7300706985 /* CenterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CenterVC.m; path = XiangYin/Center/CenterVC.m; sourceTree = SOURCE_ROOT; };
+		22A2C73621B10F7300706985 /* CenterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CenterVC.xib; path = XiangYin/Center/CenterVC.xib; sourceTree = SOURCE_ROOT; };
+		22A2C73921B10F8E00706985 /* TransactionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransactionVC.h; sourceTree = "<group>"; };
+		22A2C73A21B10F8E00706985 /* TransactionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransactionVC.m; sourceTree = "<group>"; };
+		22A2C73B21B10F8E00706985 /* TransactionVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionVC.xib; sourceTree = "<group>"; };
+		22A2C73E21B10F9B00706985 /* MyVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVC.h; sourceTree = "<group>"; };
+		22A2C73F21B10F9B00706985 /* MyVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVC.m; sourceTree = "<group>"; };
+		22A2C74021B10F9B00706985 /* MyVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyVC.xib; sourceTree = "<group>"; };
+		22A2C74521B110A100706985 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
+		22A2C74621B110A100706985 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
+		22A2C74821B110BA00706985 /* XiangYin.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XiangYin.pch; sourceTree = "<group>"; };
+		22A2C74A21B1157A00706985 /* NSObject+XWAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+XWAdd.m"; sourceTree = "<group>"; };
+		22A2C74B21B1157B00706985 /* NSObject+XWAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+XWAdd.h"; sourceTree = "<group>"; };
+		22A2C74D21B1158600706985 /* FSTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSTextView.h; sourceTree = "<group>"; };
+		22A2C74E21B1158600706985 /* UIButton+ImageTitleSpacing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageTitleSpacing.m"; sourceTree = "<group>"; };
+		22A2C75021B1158700706985 /* UIButton+ImageTitleSpacing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImageTitleSpacing.h"; sourceTree = "<group>"; };
+		22A2C75221B1158700706985 /* FSTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSTextView.m; sourceTree = "<group>"; };
+		22A2C75621B1159200706985 /* MyColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyColor.h; sourceTree = "<group>"; };
+		22A2C75721B1159300706985 /* MyColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyColor.m; sourceTree = "<group>"; };
+		22A2C75A21B115B100706985 /* WXDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDataService.m; sourceTree = "<group>"; };
+		22A2C75B21B115B100706985 /* WXDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDataService.h; sourceTree = "<group>"; };
+		22A2C75D21B115C800706985 /* LxCustomAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LxCustomAlert.h; sourceTree = "<group>"; };
+		22A2C75E21B115C800706985 /* LxCustomAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LxCustomAlert.m; sourceTree = "<group>"; };
+		22A2C77121B1173100706985 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
+		22A2C77221B1173100706985 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
+		22A2C77521B11CC500706985 /* UIView+ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ViewController.h"; sourceTree = "<group>"; };
+		22A2C77621B11CC500706985 /* UIView+ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewController.m"; sourceTree = "<group>"; };
+		22A2C77721B11CC500706985 /* UIViewExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewExt.h; sourceTree = "<group>"; };
+		22A2C77821B11CC500706985 /* UIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewExt.m; sourceTree = "<group>"; };
+		22A2C77B21B1231A00706985 /* MBProgressHUD+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Add.h"; sourceTree = "<group>"; };
+		22A2C77C21B1231F00706985 /* MBProgressHUD+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Add.m"; sourceTree = "<group>"; };
+		22C1F2FC21B139BE0043583F /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		22C1F2FD21B139BE0043583F /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		22C1F2FF21B139C60043583F /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		22C1F30021B139C80043583F /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		22C1F30321B13B600043583F /* LYEmptyBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYEmptyBaseView.h; sourceTree = "<group>"; };
+		22C1F30421B13B600043583F /* LYEmptyBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYEmptyBaseView.m; sourceTree = "<group>"; };
+		22C1F30521B13B600043583F /* LYEmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYEmptyView.h; sourceTree = "<group>"; };
+		22C1F30621B13B600043583F /* LYEmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYEmptyView.m; sourceTree = "<group>"; };
+		22C1F30721B13B600043583F /* LYEmptyViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYEmptyViewHeader.h; sourceTree = "<group>"; };
+		22C1F30821B13B600043583F /* UIScrollView+Empty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Empty.h"; sourceTree = "<group>"; };
+		22C1F30921B13B600043583F /* UIScrollView+Empty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Empty.m"; sourceTree = "<group>"; };
+		22C1F30A21B13B600043583F /* UIView+LYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LYExtension.h"; sourceTree = "<group>"; };
+		22C1F30B21B13B600043583F /* UIView+LYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LYExtension.m"; sourceTree = "<group>"; };
+		3F435B93B0CD2D18A6FF0793 /* Pods-XiangYinUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XiangYinUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XiangYinUITests/Pods-XiangYinUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5C717B44F2D08FEA0AB4B715 /* Pods-XiangYinTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XiangYinTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XiangYinTests/Pods-XiangYinTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7D2B01F291172B190AFE9815 /* libPods-XiangYinUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XiangYinUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8372611320943134463A9D29 /* Pods-XiangYin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XiangYin.release.xcconfig"; path = "Pods/Target Support Files/Pods-XiangYin/Pods-XiangYin.release.xcconfig"; sourceTree = "<group>"; };
+		91FF1015AC401D114A36EE42 /* Pods-XiangYinUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XiangYinUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XiangYinUITests/Pods-XiangYinUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AA4ACC84BD175CE12BC4A5E9 /* Pods-XiangYinTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XiangYinTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XiangYinTests/Pods-XiangYinTests.release.xcconfig"; sourceTree = "<group>"; };
+		B0F2719C302FAEF55C459A93 /* libPods-XiangYinTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XiangYinTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E256E11427D5C734621DBF29 /* Pods-XiangYin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XiangYin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XiangYin/Pods-XiangYin.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73D65B9CB2614F4619EDBB62 /* libPods-XiangYin.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90B470052F551313DD1D3DF7 /* libPods-XiangYinTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +164,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43999EDA5B9D0187B712D7F9 /* libPods-XiangYinUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +178,8 @@
 				22A2C70A21B10D7900706985 /* XiangYinTests */,
 				22A2C71521B10D7900706985 /* XiangYinUITests */,
 				22A2C6F021B10D5400706985 /* Products */,
+				C21CD3EA5CE0CC881F04757C /* Pods */,
+				E3991A81B4BB5F4FA0E09C68 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +198,14 @@
 			children = (
 				22A2C6F221B10D5400706985 /* AppDelegate.h */,
 				22A2C6F321B10D5400706985 /* AppDelegate.m */,
+				22A2C74321B1107F00706985 /* 基类 */,
+				22A2C72421B10E1A00706985 /* 城市圈 */,
+				22A2C72921B10E3A00706985 /* 登录 */,
+				22A2C72821B10E3800706985 /* 美食美景 */,
+				22A2C72621B10E2B00706985 /* 同城交易 */,
+				22A2C74921B1154200706985 /* Center */,
+				22A2C72521B10E2800706985 /* 我的 */,
+				22A2C74421B1108E00706985 /* 工具 */,
 				22A2C6F521B10D5400706985 /* ViewController.h */,
 				22A2C6F621B10D5500706985 /* ViewController.m */,
 				22A2C6F821B10D5500706985 /* Main.storyboard */,
@@ -110,6 +213,7 @@
 				22A2C6FD21B10D7900706985 /* LaunchScreen.storyboard */,
 				22A2C70021B10D7900706985 /* Info.plist */,
 				22A2C70121B10D7900706985 /* main.m */,
+				22A2C74821B110BA00706985 /* XiangYin.pch */,
 			);
 			path = XiangYin;
 			sourceTree = "<group>";
@@ -132,6 +236,159 @@
 			path = XiangYinUITests;
 			sourceTree = "<group>";
 		};
+		22A2C72421B10E1A00706985 /* 城市圈 */ = {
+			isa = PBXGroup;
+			children = (
+				22A2C72A21B10F2300706985 /* CityCircleVC.h */,
+				22A2C72B21B10F2300706985 /* CityCircleVC.m */,
+				22A2C72C21B10F2300706985 /* CityCircleVC.xib */,
+			);
+			path = "城市圈";
+			sourceTree = "<group>";
+		};
+		22A2C72521B10E2800706985 /* 我的 */ = {
+			isa = PBXGroup;
+			children = (
+				22A2C77421B11CC500706985 /* UIViewExt */,
+				22A2C73E21B10F9B00706985 /* MyVC.h */,
+				22A2C73F21B10F9B00706985 /* MyVC.m */,
+				22A2C74021B10F9B00706985 /* MyVC.xib */,
+			);
+			path = "我的";
+			sourceTree = "<group>";
+		};
+		22A2C72621B10E2B00706985 /* 同城交易 */ = {
+			isa = PBXGroup;
+			children = (
+				22A2C73921B10F8E00706985 /* TransactionVC.h */,
+				22A2C73A21B10F8E00706985 /* TransactionVC.m */,
+				22A2C73B21B10F8E00706985 /* TransactionVC.xib */,
+			);
+			path = "同城交易";
+			sourceTree = "<group>";
+		};
+		22A2C72821B10E3800706985 /* 美食美景 */ = {
+			isa = PBXGroup;
+			children = (
+				22A2C72F21B10F6400706985 /* FoodandSpotVC.h */,
+				22A2C73021B10F6400706985 /* FoodandSpotVC.m */,
+				22A2C73121B10F6400706985 /* FoodandSpotVC.xib */,
+			);
+			path = "美食美景";
+			sourceTree = "<group>";
+		};
+		22A2C72921B10E3A00706985 /* 登录 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "登录";
+			sourceTree = "<group>";
+		};
+		22A2C74321B1107F00706985 /* 基类 */ = {
+			isa = PBXGroup;
+			children = (
+				22A2C77121B1173100706985 /* MainTabBarController.h */,
+				22A2C77221B1173100706985 /* MainTabBarController.m */,
+				22C1F2FC21B139BE0043583F /* BaseNavigationController.h */,
+				22C1F2FD21B139BE0043583F /* BaseNavigationController.m */,
+				22C1F30021B139C80043583F /* BaseViewController.h */,
+				22C1F2FF21B139C60043583F /* BaseViewController.m */,
+			);
+			path = "基类";
+			sourceTree = "<group>";
+		};
+		22A2C74421B1108E00706985 /* 工具 */ = {
+			isa = PBXGroup;
+			children = (
+				22A2C77B21B1231A00706985 /* MBProgressHUD+Add.h */,
+				22A2C77C21B1231F00706985 /* MBProgressHUD+Add.m */,
+				22A2C75921B115A100706985 /* 网络请求 */,
+				22A2C74521B110A100706985 /* UINavigationController+FDFullscreenPopGesture.h */,
+				22A2C74621B110A100706985 /* UINavigationController+FDFullscreenPopGesture.m */,
+				22C1F30221B13B600043583F /* LYEmptyView */,
+				22A2C74B21B1157B00706985 /* NSObject+XWAdd.h */,
+				22A2C74A21B1157A00706985 /* NSObject+XWAdd.m */,
+				22A2C74D21B1158600706985 /* FSTextView.h */,
+				22A2C75221B1158700706985 /* FSTextView.m */,
+				22A2C75021B1158700706985 /* UIButton+ImageTitleSpacing.h */,
+				22A2C74E21B1158600706985 /* UIButton+ImageTitleSpacing.m */,
+				22A2C75621B1159200706985 /* MyColor.h */,
+				22A2C75721B1159300706985 /* MyColor.m */,
+				22A2C75D21B115C800706985 /* LxCustomAlert.h */,
+				22A2C75E21B115C800706985 /* LxCustomAlert.m */,
+			);
+			path = "工具";
+			sourceTree = "<group>";
+		};
+		22A2C74921B1154200706985 /* Center */ = {
+			isa = PBXGroup;
+			children = (
+				22A2C73421B10F7300706985 /* CenterVC.h */,
+				22A2C73521B10F7300706985 /* CenterVC.m */,
+				22A2C73621B10F7300706985 /* CenterVC.xib */,
+			);
+			path = Center;
+			sourceTree = "<group>";
+		};
+		22A2C75921B115A100706985 /* 网络请求 */ = {
+			isa = PBXGroup;
+			children = (
+				22A2C75B21B115B100706985 /* WXDataService.h */,
+				22A2C75A21B115B100706985 /* WXDataService.m */,
+			);
+			path = "网络请求";
+			sourceTree = "<group>";
+		};
+		22A2C77421B11CC500706985 /* UIViewExt */ = {
+			isa = PBXGroup;
+			children = (
+				22A2C77521B11CC500706985 /* UIView+ViewController.h */,
+				22A2C77621B11CC500706985 /* UIView+ViewController.m */,
+				22A2C77721B11CC500706985 /* UIViewExt.h */,
+				22A2C77821B11CC500706985 /* UIViewExt.m */,
+			);
+			path = UIViewExt;
+			sourceTree = "<group>";
+		};
+		22C1F30221B13B600043583F /* LYEmptyView */ = {
+			isa = PBXGroup;
+			children = (
+				22C1F30321B13B600043583F /* LYEmptyBaseView.h */,
+				22C1F30421B13B600043583F /* LYEmptyBaseView.m */,
+				22C1F30521B13B600043583F /* LYEmptyView.h */,
+				22C1F30621B13B600043583F /* LYEmptyView.m */,
+				22C1F30721B13B600043583F /* LYEmptyViewHeader.h */,
+				22C1F30821B13B600043583F /* UIScrollView+Empty.h */,
+				22C1F30921B13B600043583F /* UIScrollView+Empty.m */,
+				22C1F30A21B13B600043583F /* UIView+LYExtension.h */,
+				22C1F30B21B13B600043583F /* UIView+LYExtension.m */,
+			);
+			path = LYEmptyView;
+			sourceTree = "<group>";
+		};
+		C21CD3EA5CE0CC881F04757C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E256E11427D5C734621DBF29 /* Pods-XiangYin.debug.xcconfig */,
+				8372611320943134463A9D29 /* Pods-XiangYin.release.xcconfig */,
+				5C717B44F2D08FEA0AB4B715 /* Pods-XiangYinTests.debug.xcconfig */,
+				AA4ACC84BD175CE12BC4A5E9 /* Pods-XiangYinTests.release.xcconfig */,
+				91FF1015AC401D114A36EE42 /* Pods-XiangYinUITests.debug.xcconfig */,
+				3F435B93B0CD2D18A6FF0793 /* Pods-XiangYinUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E3991A81B4BB5F4FA0E09C68 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				100CF5EBDB9F4A516F3D1341 /* libPods-XiangYin.a */,
+				B0F2719C302FAEF55C459A93 /* libPods-XiangYinTests.a */,
+				7D2B01F291172B190AFE9815 /* libPods-XiangYinUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +396,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22A2C71B21B10D7900706985 /* Build configuration list for PBXNativeTarget "XiangYin" */;
 			buildPhases = (
+				18CDF3ED262227AF2ED9B7F5 /* [CP] Check Pods Manifest.lock */,
 				22A2C6EB21B10D5400706985 /* Sources */,
 				22A2C6EC21B10D5400706985 /* Frameworks */,
 				22A2C6ED21B10D5400706985 /* Resources */,
+				3F817C344786B0A01AE65947 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -156,6 +415,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22A2C71E21B10D7900706985 /* Build configuration list for PBXNativeTarget "XiangYinTests" */;
 			buildPhases = (
+				CC0D48510C0A773759487CE3 /* [CP] Check Pods Manifest.lock */,
 				22A2C70321B10D7900706985 /* Sources */,
 				22A2C70421B10D7900706985 /* Frameworks */,
 				22A2C70521B10D7900706985 /* Resources */,
@@ -174,6 +434,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22A2C72121B10D7900706985 /* Build configuration list for PBXNativeTarget "XiangYinUITests" */;
 			buildPhases = (
+				BE7431EA37BB87DD6FC78CDF /* [CP] Check Pods Manifest.lock */,
 				22A2C70E21B10D7900706985 /* Sources */,
 				22A2C70F21B10D7900706985 /* Frameworks */,
 				22A2C71021B10D7900706985 /* Resources */,
@@ -235,9 +496,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22A2C74221B10F9B00706985 /* MyVC.xib in Resources */,
 				22A2C6FF21B10D7900706985 /* LaunchScreen.storyboard in Resources */,
+				22A2C72E21B10F2300706985 /* CityCircleVC.xib in Resources */,
 				22A2C6FC21B10D7800706985 /* Assets.xcassets in Resources */,
+				22A2C73821B10F7300706985 /* CenterVC.xib in Resources */,
+				22A2C73D21B10F8E00706985 /* TransactionVC.xib in Resources */,
 				22A2C6FA21B10D5500706985 /* Main.storyboard in Resources */,
+				22A2C73321B10F6400706985 /* FoodandSpotVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,14 +523,113 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		18CDF3ED262227AF2ED9B7F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XiangYin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3F817C344786B0A01AE65947 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-XiangYin/Pods-XiangYin-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XiangYin/Pods-XiangYin-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE7431EA37BB87DD6FC78CDF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XiangYinUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC0D48510C0A773759487CE3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XiangYinTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		22A2C6EB21B10D5400706985 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22A2C75321B1158700706985 /* UIButton+ImageTitleSpacing.m in Sources */,
+				22A2C75F21B115C800706985 /* LxCustomAlert.m in Sources */,
+				22A2C74121B10F9B00706985 /* MyVC.m in Sources */,
 				22A2C6F721B10D5500706985 /* ViewController.m in Sources */,
+				22A2C73221B10F6400706985 /* FoodandSpotVC.m in Sources */,
+				22C1F2FE21B139BE0043583F /* BaseNavigationController.m in Sources */,
+				22A2C74721B110A100706985 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
+				22A2C74C21B1157B00706985 /* NSObject+XWAdd.m in Sources */,
+				22A2C72D21B10F2300706985 /* CityCircleVC.m in Sources */,
+				22C1F30E21B13B610043583F /* UIScrollView+Empty.m in Sources */,
+				22A2C75C21B115B100706985 /* WXDataService.m in Sources */,
+				22C1F30C21B13B610043583F /* LYEmptyBaseView.m in Sources */,
+				22A2C77D21B1231F00706985 /* MBProgressHUD+Add.m in Sources */,
+				22C1F30F21B13B610043583F /* UIView+LYExtension.m in Sources */,
 				22A2C70221B10D7900706985 /* main.m in Sources */,
+				22A2C75521B1158700706985 /* FSTextView.m in Sources */,
+				22A2C77A21B11CC600706985 /* UIViewExt.m in Sources */,
+				22C1F30D21B13B610043583F /* LYEmptyView.m in Sources */,
+				22C1F30121B139C90043583F /* BaseViewController.m in Sources */,
+				22A2C77321B1173100706985 /* MainTabBarController.m in Sources */,
+				22A2C73C21B10F8E00706985 /* TransactionVC.m in Sources */,
+				22A2C75821B1159300706985 /* MyColor.m in Sources */,
+				22A2C77921B11CC600706985 /* UIView+ViewController.m in Sources */,
 				22A2C6F421B10D5400706985 /* AppDelegate.m in Sources */,
+				22A2C73721B10F7300706985 /* CenterVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,10 +798,14 @@
 		};
 		22A2C71C21B10D7900706985 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E256E11427D5C734621DBF29 /* Pods-XiangYin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CNDZ5W46CP;
+				GCC_PREFIX_HEADER = /Users/liuxiang/Desktop/XiangYin/XiangYin/XiangYin.pch;
 				INFOPLIST_FILE = XiangYin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -449,10 +818,14 @@
 		};
 		22A2C71D21B10D7900706985 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8372611320943134463A9D29 /* Pods-XiangYin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CNDZ5W46CP;
+				GCC_PREFIX_HEADER = /Users/liuxiang/Desktop/XiangYin/XiangYin/XiangYin.pch;
 				INFOPLIST_FILE = XiangYin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,6 +838,7 @@
 		};
 		22A2C71F21B10D7900706985 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C717B44F2D08FEA0AB4B715 /* Pods-XiangYinTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -483,6 +857,7 @@
 		};
 		22A2C72021B10D7900706985 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA4ACC84BD175CE12BC4A5E9 /* Pods-XiangYinTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -501,6 +876,7 @@
 		};
 		22A2C72221B10D7900706985 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91FF1015AC401D114A36EE42 /* Pods-XiangYinUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = XiangYinUITests/Info.plist;
@@ -518,6 +894,7 @@
 		};
 		22A2C72321B10D7900706985 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F435B93B0CD2D18A6FF0793 /* Pods-XiangYinUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = XiangYinUITests/Info.plist;
