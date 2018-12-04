@@ -226,6 +226,22 @@
 			path = UIButton;
 			sourceTree = "<group>";
 		};
+		2201C89821B66554004E1B24 /* 中间弹出lib */ = {
+			isa = PBXGroup;
+			children = (
+				22B5720521B51F720032D31F /* HyPopMenuView.h */,
+				22B5720C21B51F740032D31F /* HyPopMenuView.m */,
+				22B5720B21B51F730032D31F /* HyPopMenuViewDelegate.h */,
+				22B5720721B51F730032D31F /* PopMenuButton.h */,
+				22B5720821B51F730032D31F /* PopMenuButton.m */,
+				22B5720421B51F720032D31F /* PopMenuModel.h */,
+				22B5720921B51F730032D31F /* PopMenuModel.m */,
+				22B5720A21B51F730032D31F /* UIColor+ImageGetColor.h */,
+				22B5720621B51F720032D31F /* UIColor+ImageGetColor.m */,
+			);
+			path = "中间弹出lib";
+			sourceTree = "<group>";
+		};
 		22A2C6E621B10D5400706985 = {
 			isa = PBXGroup;
 			children = (
@@ -378,15 +394,7 @@
 		22A2C74921B1154200706985 /* Center */ = {
 			isa = PBXGroup;
 			children = (
-				22B5720521B51F720032D31F /* HyPopMenuView.h */,
-				22B5720C21B51F740032D31F /* HyPopMenuView.m */,
-				22B5720B21B51F730032D31F /* HyPopMenuViewDelegate.h */,
-				22B5720721B51F730032D31F /* PopMenuButton.h */,
-				22B5720821B51F730032D31F /* PopMenuButton.m */,
-				22B5720421B51F720032D31F /* PopMenuModel.h */,
-				22B5720921B51F730032D31F /* PopMenuModel.m */,
-				22B5720A21B51F730032D31F /* UIColor+ImageGetColor.h */,
-				22B5720621B51F720032D31F /* UIColor+ImageGetColor.m */,
+				2201C89821B66554004E1B24 /* 中间弹出lib */,
 				22A2C73421B10F7300706985 /* CenterVC.h */,
 				22A2C73521B10F7300706985 /* CenterVC.m */,
 				22A2C73621B10F7300706985 /* CenterVC.xib */,
