@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2201C88021B65921004E1B24 /* ReleaseTextVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2201C87E21B65920004E1B24 /* ReleaseTextVC.m */; };
+		2201C88121B65921004E1B24 /* ReleaseTextVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2201C87F21B65921004E1B24 /* ReleaseTextVC.xib */; };
+		2201C88521B65936004E1B24 /* ReleaseVideoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2201C88321B65936004E1B24 /* ReleaseVideoVC.m */; };
+		2201C88621B65936004E1B24 /* ReleaseVideoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2201C88421B65936004E1B24 /* ReleaseVideoVC.xib */; };
+		2201C88A21B6594C004E1B24 /* ReleasePhotoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2201C88821B6594C004E1B24 /* ReleasePhotoVC.m */; };
+		2201C88B21B6594C004E1B24 /* ReleasePhotoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2201C88921B6594C004E1B24 /* ReleasePhotoVC.xib */; };
+		2201C88E21B65AF1004E1B24 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2201C88C21B65AF0004E1B24 /* BaseViewController.m */; };
 		223700E621B516EE00408578 /* WXDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = 223700E421B516EE00408578 /* WXDataService.m */; };
 		22A2C6F421B10D5400706985 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A2C6F321B10D5400706985 /* AppDelegate.m */; };
 		22A2C6F721B10D5500706985 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A2C6F621B10D5500706985 /* ViewController.m */; };
@@ -42,7 +49,6 @@
 		22B5720F21B51F740032D31F /* PopMenuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B5720921B51F730032D31F /* PopMenuModel.m */; };
 		22B5721021B51F740032D31F /* HyPopMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B5720C21B51F740032D31F /* HyPopMenuView.m */; };
 		22C1F2FE21B139BE0043583F /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1F2FD21B139BE0043583F /* BaseNavigationController.m */; };
-		22C1F30121B139C90043583F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1F2FF21B139C60043583F /* BaseViewController.m */; };
 		22C1F30C21B13B610043583F /* LYEmptyBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1F30421B13B600043583F /* LYEmptyBaseView.m */; };
 		22C1F30D21B13B610043583F /* LYEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1F30621B13B600043583F /* LYEmptyView.m */; };
 		22C1F30E21B13B610043583F /* UIScrollView+Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1F30921B13B600043583F /* UIScrollView+Empty.m */; };
@@ -71,6 +77,17 @@
 
 /* Begin PBXFileReference section */
 		100CF5EBDB9F4A516F3D1341 /* libPods-XiangYin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XiangYin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2201C87D21B65920004E1B24 /* ReleaseTextVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReleaseTextVC.h; sourceTree = "<group>"; };
+		2201C87E21B65920004E1B24 /* ReleaseTextVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReleaseTextVC.m; sourceTree = "<group>"; };
+		2201C87F21B65921004E1B24 /* ReleaseTextVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReleaseTextVC.xib; sourceTree = "<group>"; };
+		2201C88221B65936004E1B24 /* ReleaseVideoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReleaseVideoVC.h; sourceTree = "<group>"; };
+		2201C88321B65936004E1B24 /* ReleaseVideoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReleaseVideoVC.m; sourceTree = "<group>"; };
+		2201C88421B65936004E1B24 /* ReleaseVideoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReleaseVideoVC.xib; sourceTree = "<group>"; };
+		2201C88721B6594C004E1B24 /* ReleasePhotoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReleasePhotoVC.h; sourceTree = "<group>"; };
+		2201C88821B6594C004E1B24 /* ReleasePhotoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReleasePhotoVC.m; sourceTree = "<group>"; };
+		2201C88921B6594C004E1B24 /* ReleasePhotoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReleasePhotoVC.xib; sourceTree = "<group>"; };
+		2201C88C21B65AF0004E1B24 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		2201C88D21B65AF1004E1B24 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		223700E421B516EE00408578 /* WXDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDataService.m; sourceTree = "<group>"; };
 		223700E521B516EE00408578 /* WXDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDataService.h; sourceTree = "<group>"; };
 		22A2C6EF21B10D5400706985 /* XiangYin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XiangYin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,8 +155,6 @@
 		22B5720C21B51F740032D31F /* HyPopMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyPopMenuView.m; sourceTree = "<group>"; };
 		22C1F2FC21B139BE0043583F /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
 		22C1F2FD21B139BE0043583F /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
-		22C1F2FF21B139C60043583F /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
-		22C1F30021B139C80043583F /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		22C1F30321B13B600043583F /* LYEmptyBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYEmptyBaseView.h; sourceTree = "<group>"; };
 		22C1F30421B13B600043583F /* LYEmptyBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYEmptyBaseView.m; sourceTree = "<group>"; };
 		22C1F30521B13B600043583F /* LYEmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYEmptyView.h; sourceTree = "<group>"; };
@@ -187,6 +202,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2201C88F21B65AF7004E1B24 /* 导航栏lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "导航栏lib";
+			sourceTree = "<group>";
+		};
+		2201C89021B65BF2004E1B24 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				2201C89721B65C53004E1B24 /* UIButton */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		2201C89721B65C53004E1B24 /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				22A2C75021B1158700706985 /* UIButton+ImageTitleSpacing.h */,
+				22A2C74E21B1158600706985 /* UIButton+ImageTitleSpacing.m */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
 		22A2C6E621B10D5400706985 = {
 			isa = PBXGroup;
 			children = (
@@ -307,8 +346,9 @@
 				22A2C77221B1173100706985 /* MainTabBarController.m */,
 				22C1F2FC21B139BE0043583F /* BaseNavigationController.h */,
 				22C1F2FD21B139BE0043583F /* BaseNavigationController.m */,
-				22C1F30021B139C80043583F /* BaseViewController.h */,
-				22C1F2FF21B139C60043583F /* BaseViewController.m */,
+				2201C88D21B65AF1004E1B24 /* BaseViewController.h */,
+				2201C88C21B65AF0004E1B24 /* BaseViewController.m */,
+				2201C88F21B65AF7004E1B24 /* 导航栏lib */,
 			);
 			path = "基类";
 			sourceTree = "<group>";
@@ -316,6 +356,7 @@
 		22A2C74421B1108E00706985 /* 工具 */ = {
 			isa = PBXGroup;
 			children = (
+				2201C89021B65BF2004E1B24 /* Category */,
 				22B571FE21B51E920032D31F /* MBProgressHUD+Add.h */,
 				22B571FF21B51E920032D31F /* MBProgressHUD+Add.m */,
 				22A2C75921B115A100706985 /* 网络请求 */,
@@ -326,8 +367,6 @@
 				22A2C74A21B1157A00706985 /* NSObject+XWAdd.m */,
 				22A2C74D21B1158600706985 /* FSTextView.h */,
 				22A2C75221B1158700706985 /* FSTextView.m */,
-				22A2C75021B1158700706985 /* UIButton+ImageTitleSpacing.h */,
-				22A2C74E21B1158600706985 /* UIButton+ImageTitleSpacing.m */,
 				22A2C75621B1159200706985 /* MyColor.h */,
 				22A2C75721B1159300706985 /* MyColor.m */,
 				22A2C75D21B115C800706985 /* LxCustomAlert.h */,
@@ -351,6 +390,15 @@
 				22A2C73421B10F7300706985 /* CenterVC.h */,
 				22A2C73521B10F7300706985 /* CenterVC.m */,
 				22A2C73621B10F7300706985 /* CenterVC.xib */,
+				2201C87D21B65920004E1B24 /* ReleaseTextVC.h */,
+				2201C87E21B65920004E1B24 /* ReleaseTextVC.m */,
+				2201C87F21B65921004E1B24 /* ReleaseTextVC.xib */,
+				2201C88221B65936004E1B24 /* ReleaseVideoVC.h */,
+				2201C88321B65936004E1B24 /* ReleaseVideoVC.m */,
+				2201C88421B65936004E1B24 /* ReleaseVideoVC.xib */,
+				2201C88721B6594C004E1B24 /* ReleasePhotoVC.h */,
+				2201C88821B6594C004E1B24 /* ReleasePhotoVC.m */,
+				2201C88921B6594C004E1B24 /* ReleasePhotoVC.xib */,
 			);
 			path = Center;
 			sourceTree = "<group>";
@@ -525,7 +573,10 @@
 			files = (
 				22A2C74221B10F9B00706985 /* MyVC.xib in Resources */,
 				22A2C6FF21B10D7900706985 /* LaunchScreen.storyboard in Resources */,
+				2201C88621B65936004E1B24 /* ReleaseVideoVC.xib in Resources */,
 				22A2C72E21B10F2300706985 /* CityCircleVC.xib in Resources */,
+				2201C88121B65921004E1B24 /* ReleaseTextVC.xib in Resources */,
+				2201C88B21B6594C004E1B24 /* ReleasePhotoVC.xib in Resources */,
 				22A2C6FC21B10D7800706985 /* Assets.xcassets in Resources */,
 				22A2C73821B10F7300706985 /* CenterVC.xib in Resources */,
 				22A2C73D21B10F8E00706985 /* TransactionVC.xib in Resources */,
@@ -645,20 +696,23 @@
 				22A2C72D21B10F2300706985 /* CityCircleVC.m in Sources */,
 				22B5720E21B51F740032D31F /* PopMenuButton.m in Sources */,
 				22C1F30E21B13B610043583F /* UIScrollView+Empty.m in Sources */,
+				2201C88E21B65AF1004E1B24 /* BaseViewController.m in Sources */,
 				22B5720321B51ED60032D31F /* NSDictionary+SetNullWithStr.m in Sources */,
 				22C1F30C21B13B610043583F /* LYEmptyBaseView.m in Sources */,
 				223700E621B516EE00408578 /* WXDataService.m in Sources */,
 				22B5720021B51E920032D31F /* MBProgressHUD+Add.m in Sources */,
 				22C1F30F21B13B610043583F /* UIView+LYExtension.m in Sources */,
 				22A2C70221B10D7900706985 /* main.m in Sources */,
+				2201C88021B65921004E1B24 /* ReleaseTextVC.m in Sources */,
 				22A2C75521B1158700706985 /* FSTextView.m in Sources */,
+				2201C88A21B6594C004E1B24 /* ReleasePhotoVC.m in Sources */,
 				22A2C77A21B11CC600706985 /* UIViewExt.m in Sources */,
 				22C1F30D21B13B610043583F /* LYEmptyView.m in Sources */,
-				22C1F30121B139C90043583F /* BaseViewController.m in Sources */,
 				22A2C77321B1173100706985 /* MainTabBarController.m in Sources */,
 				22A2C73C21B10F8E00706985 /* TransactionVC.m in Sources */,
 				22A2C75821B1159300706985 /* MyColor.m in Sources */,
 				22A2C77921B11CC600706985 /* UIView+ViewController.m in Sources */,
+				2201C88521B65936004E1B24 /* ReleaseVideoVC.m in Sources */,
 				22A2C6F421B10D5400706985 /* AppDelegate.m in Sources */,
 				22B5720F21B51F740032D31F /* PopMenuModel.m in Sources */,
 				22A2C73721B10F7300706985 /* CenterVC.m in Sources */,
@@ -835,7 +889,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CNDZ5W46CP;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/XiangYin/XiangYin/XiangYin.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/XiangYin/XiangYin.pch";
 				INFOPLIST_FILE = XiangYin/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -855,7 +909,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CNDZ5W46CP;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/XiangYin/XiangYin/XiangYin.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/XiangYin/XiangYin.pch";
 				INFOPLIST_FILE = XiangYin/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (

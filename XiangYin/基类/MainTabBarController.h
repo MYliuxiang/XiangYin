@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <AxcAE_TabBar/AxcAE_TabBar.h>
 #import "HyPopMenuView.h"
+#import "ReleaseTextVC.h"
+#import "ReleasePhotoVC.h"
+#import "ReleaseVideoVC.h"
 
 @interface MainTabBarController : UITabBarController
 

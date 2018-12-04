@@ -179,7 +179,7 @@ static BOOL isAlpha = false;
     }
     [UIView animateWithDuration:Duration animations:^{
         if (isAlpha) {
-            [weakView.backgroundView setAlpha:1];
+            [weakView.backgroundView setAlpha:.6];
         }else{
             UIVisualEffectView *effect = (id)_backgroundView;
             effect.effect = effectBlur;

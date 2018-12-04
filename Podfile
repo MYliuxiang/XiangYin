@@ -26,7 +26,8 @@ target 'XiangYin' do
    pod 'MBProgressHUD'
    pod 'AxcAE_TabBar'
    pod 'WRNavigationBar'
-  pod 'pop'
+   pod 'pop'
+   pod 'WRNavigationBar','~>1.2.0’
   
   
   

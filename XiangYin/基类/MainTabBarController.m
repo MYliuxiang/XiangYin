@@ -38,8 +38,6 @@ static MainTabBarController *mainTVC = nil;
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     [self addChildViewControllers];
-    
-    
     _menu = [HyPopMenuView sharedPopMenuManager];
     PopMenuModel* model = [PopMenuModel
                            allocPopMenuModelWithImageNameString:@"发布主页-文字"
@@ -61,7 +59,6 @@ static MainTabBarController *mainTVC = nil;
                             AtTextColor:[UIColor grayColor]
                             AtTransitionType:PopMenuTransitionTypeCustomizeApi
                             AtTransitionRenderingColor:nil];
-    
    
     
     _menu.dataSource = @[ model, model1, model2];
@@ -73,15 +70,37 @@ static MainTabBarController *mainTVC = nil;
         UILabel* topView = [[UILabel alloc] init];
     topView.text = @"乡音";
     topView.font = [UIFont systemFontOfSize:32];
-        topView.frame = CGRectMake(0, 44, CGRectGetWidth(self.view.frame), 92);
+    topView.frame = CGRectMake(0, 44, CGRectGetWidth(self.view.frame), 92);
     topView.textAlignment = NSTextAlignmentCenter;
         _menu.topView = topView;
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)popMenuView:(HyPopMenuView*)popMenuView
 didSelectItemAtIndex:(NSUInteger)index
 {
+    BaseNavigationController *nav;
+    switch (index) {
+        case 0:{
+            nav = [[BaseNavigationController alloc] initWithRootViewController:[ReleaseTextVC new]];
+            
+        }
+            
+            break;
+        case 1:
+            nav = [[BaseNavigationController alloc] initWithRootViewController:[ReleaseVideoVC new]];
+
+            break;
+        case 2:
+            nav = [[BaseNavigationController alloc] initWithRootViewController:[ReleasePhotoVC new]];
+
+            break;
+            
+        default:
+            break;
+    }
+    
+    [self presentViewController:nav animated:YES completion:nil];
+    
     
 }
 
@@ -181,19 +200,11 @@ static NSInteger lastIdx = 0;
         lastIdx = index;
     }else{ // 点击了中间的
         [self.axcTabBar setSelectIndex:lastIdx WithAnimation:NO]; // 换回上一个选中状态
-        // 或者
-        //        self.axcTabBar.selectIndex = lastIdx; // 不去切换TabBar的选中状态
-//        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:@"点击了中间的,不切换视图"
-//                                                                          preferredStyle:UIAlertControllerStyleAlert];
-//        [alertController addAction:([UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-//            NSLog(@"好的！！！！");
-//        }])];
-//        [self presentViewController:alertController animated:YES completion:nil];
-        
-        _menu.backgroundType = HyPopMenuViewBackgroundTypeLightBlur;
+         _menu.backgroundType = HyPopMenuViewBackgroundTypeLightBlur;
         [_menu openMenu];
     }
 }
+
 - (void)setSelectedIndex:(NSUInteger)selectedIndex{
     [super setSelectedIndex:selectedIndex];
     if(self.axcTabBar){
@@ -211,8 +222,6 @@ static NSInteger lastIdx = 0;
     self.axcTabBar.frame = self.tabBar.bounds;
     [self.axcTabBar viewDidLayoutItems];
 }
-
-
 
 
 //单例方法
