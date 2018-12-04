@@ -222,7 +222,12 @@ static NSInteger lastIdx = 0;
     self.axcTabBar.frame = self.tabBar.bounds;
     [self.axcTabBar viewDidLayoutItems];
 }
-
+- (BOOL)shouldAutorotate {
+    return [self.selectedViewController shouldAutorotate];
+}
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations{
+    return [self.selectedViewController supportedInterfaceOrientations];
+}
 
 //单例方法
 + (instancetype)shareMainTabBarController
