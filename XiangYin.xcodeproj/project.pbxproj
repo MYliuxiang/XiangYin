@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2200983721B7689800BC5ED2 /* SWCommentList.m in Sources */ = {isa = PBXBuildFile; fileRef = 2200983621B7689800BC5ED2 /* SWCommentList.m */; };
 		2201C88021B65921004E1B24 /* ReleaseTextVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2201C87E21B65920004E1B24 /* ReleaseTextVC.m */; };
 		2201C88121B65921004E1B24 /* ReleaseTextVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2201C87F21B65921004E1B24 /* ReleaseTextVC.xib */; };
 		2201C88521B65936004E1B24 /* ReleaseVideoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2201C88321B65936004E1B24 /* ReleaseVideoVC.m */; };
@@ -77,6 +78,8 @@
 
 /* Begin PBXFileReference section */
 		100CF5EBDB9F4A516F3D1341 /* libPods-XiangYin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XiangYin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2200983521B7689800BC5ED2 /* SWCommentList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWCommentList.h; sourceTree = "<group>"; };
+		2200983621B7689800BC5ED2 /* SWCommentList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWCommentList.m; sourceTree = "<group>"; };
 		2201C87D21B65920004E1B24 /* ReleaseTextVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReleaseTextVC.h; sourceTree = "<group>"; };
 		2201C87E21B65920004E1B24 /* ReleaseTextVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReleaseTextVC.m; sourceTree = "<group>"; };
 		2201C87F21B65921004E1B24 /* ReleaseTextVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReleaseTextVC.xib; sourceTree = "<group>"; };
@@ -310,6 +313,8 @@
 		22A2C72421B10E1A00706985 /* 城市圈 */ = {
 			isa = PBXGroup;
 			children = (
+				2200983521B7689800BC5ED2 /* SWCommentList.h */,
+				2200983621B7689800BC5ED2 /* SWCommentList.m */,
 				22A2C72A21B10F2300706985 /* CityCircleVC.h */,
 				22A2C72B21B10F2300706985 /* CityCircleVC.m */,
 				22A2C72C21B10F2300706985 /* CityCircleVC.xib */,
@@ -718,6 +723,7 @@
 				22C1F30D21B13B610043583F /* LYEmptyView.m in Sources */,
 				22A2C77321B1173100706985 /* MainTabBarController.m in Sources */,
 				22A2C73C21B10F8E00706985 /* TransactionVC.m in Sources */,
+				2200983721B7689800BC5ED2 /* SWCommentList.m in Sources */,
 				22A2C75821B1159300706985 /* MyColor.m in Sources */,
 				22A2C77921B11CC600706985 /* UIView+ViewController.m in Sources */,
 				2201C88521B65936004E1B24 /* ReleaseVideoVC.m in Sources */,

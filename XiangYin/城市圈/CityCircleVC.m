@@ -7,9 +7,11 @@
 //
 
 #import "CityCircleVC.h"
+#import "SWCommentList.h"
 
 @interface CityCircleVC ()
 
+@property(nonatomic,strong) SWCommentList *commentView;
 @end
 
 @implementation CityCircleVC
@@ -19,7 +21,7 @@
     // Do any additional setup after loading the view from its nib.
 //    self.title = @"城市圈";
     self.navigationItem.title = @"城市圈";
-    
+  
 }
 
 /*
